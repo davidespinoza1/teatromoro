@@ -184,7 +184,7 @@ public class TeatroMoro {
                     break;
                 case 2: //comprar entradas reservadas
 
-                    TeatroMoro.mostrarVoleta(reserva);
+                    TeatroMoro.mostrarBoleta(reserva);
                     do {
                         System.out.println("Quiere 1 comprar o 2 cancelar");
                         aux = (int) leerHastaNumero();
@@ -208,7 +208,7 @@ public class TeatroMoro {
 
                     break;
                 case 3: //modificar una venta
-                    System.out.println("Denos el id del voleto a modificar");
+                    System.out.println("Denos el id del Boleto a modificar");
                     aux = (int) leerHastaNumero();
                     for (int i = 0; i < asientos.length; i++) {
                         for (int j = 0; j < asientos[i].length; j++) {
@@ -234,7 +234,7 @@ public class TeatroMoro {
                                             System.out.println("elija el numero de columna");
                                             columna = (int) leerHastaNumero();
 
-                                        } while (TeatroMoro.errorOption(1, 6, columna));
+                                        } while (TeatroMoro.errorOption(1, 5, columna));
                                         do {
                                             System.out.println("elija el numero de  fila ");
                                             fila = (int) leerHastaNumero();
@@ -261,7 +261,7 @@ public class TeatroMoro {
 
                     break;
                 case 4:
-                    TeatroMoro.mostrarVoleta(compras);
+                    TeatroMoro.mostrarBoleta(compras);
                     compras.clear();
                     break;
             }
@@ -272,7 +272,7 @@ public class TeatroMoro {
             respuesta = (int) leerHastaNumero();
              
         } while (respuesta != 2);
-        TeatroMoro.mostrarVoleta(reserva);
+        TeatroMoro.mostrarBoleta(reserva);
                     do {
                         System.out.println("Quiere 1 comprar o 2 cancelar");
                         aux = (int) leerHastaNumero();
@@ -342,7 +342,7 @@ public class TeatroMoro {
             x = z.get(columna-1);
             asientos[columna - 1][fila - 1] = new entrada(x, columna, fila, c);
         }
-    public static void mostrarVoleta(ArrayList<entrada> lista) {
+    public static void mostrarBoleta(ArrayList<entrada> lista) {
         int total = 0;
         entrada auxEntrada;
         for (int i = 0; i < lista.size(); i++) {
@@ -363,10 +363,10 @@ public class TeatroMoro {
     }
 
     private static void mostraropciones() {
-        System.out.println("1   Reservar un voleto");
+        System.out.println("1   Reservar un Boleto");
         System.out.println("2   Pagar entradas reservadas");
         System.out.println("3   modificar entrada");
-        System.out.println("4   mostrar Voleta");
+        System.out.println("4   mostrar Boleta");
 
     }
 
